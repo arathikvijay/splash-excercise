@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:linkedin/functionbool.dart';
 import 'package:linkedin/home.dart';
+import 'package:linkedin/home1.dart';
+//import 'package:linkedin/home1.dart';
 import 'package:linkedin/linkedin.dart';
+//import 'package:linkedin/linkedinhomescreen.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -22,7 +25,7 @@ class _MyWidgetState extends State<Splashscreen> {
     await Future.delayed(Duration(seconds: 2));
     final bool isloggedin=await gettingDataBool();
     if(isloggedin){
-      Navigator.push(context, MaterialPageRoute(builder:(context) => const Home(),));
+      Navigator.push(context, MaterialPageRoute(builder:(context) => const home1(),));
     }else{
       Navigator.push(context,MaterialPageRoute(builder: (context)=>linkedin(),));
     }
@@ -32,7 +35,7 @@ class _MyWidgetState extends State<Splashscreen> {
     return Scaffold(
       body:Column(
         children: [
-          Image.network("https://static.vecteezy.com/system/resources/previews/018/930/480/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png")
+          Image.asset("asset/linkedin.png")
         ],
       )
     );

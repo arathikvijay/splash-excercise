@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:linkedin/function.dart';
 import 'package:linkedin/functionbool.dart';
 import 'package:linkedin/home.dart';
+import 'package:linkedin/home1.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class linkedin extends StatefulWidget {
@@ -52,7 +53,7 @@ class _MyWidgetState extends State<linkedin> {
               onPressed:()async{
                 if(harcodedUsername==usernameControler.text && harcodedPassword==passwordController.text){
                   await storingDataToBool(true);
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const Home(),));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const home1(),));
                   
                  // print("Loged in Success");
                 }
